@@ -26,7 +26,7 @@ if (canvas) {
             y: Math.random() * canvas.height,
             radius: Math.random() * 3 + 1,
             speed: Math.random() * 1 + 0.5,
-        }));
+        })));
     };
     createSnowflakes();
 
@@ -90,6 +90,10 @@ if (languageToggle) {
                 contact: {
                     title: "Contact Me",
                     content: "Feel free to reach out to me on my social media or via email!"
+                },
+                home: {
+                    title: "Welcome to My Portfolio",
+                    content: "A space to showcase my skills, projects, and creativity with an anime-inspired theme!"
                 }
             },
             cz: {
@@ -108,6 +112,10 @@ if (languageToggle) {
                 contact: {
                     title: "Kontaktujte Mě",
                     content: "Neváhejte mě kontaktovat na mých sociálních sítích nebo e-mailem!"
+                },
+                home: {
+                    title: "Vítejte na mém portfoliu",
+                    content: "Prostor pro prezentaci mých dovedností, projektů a kreativity s anime-inspirovaným tématem!"
                 }
             }
         };
@@ -136,6 +144,9 @@ if (languageToggle) {
         } else if (page === 'contact') {
             document.querySelector('.content-block h1').textContent = translation.contact.title;
             document.querySelector('.content-block p').textContent = translation.contact.content;
+        } else if (page === 'index') {
+            document.querySelector('.content-block h1').textContent = translation.home.title;
+            document.querySelector('.content-block p').textContent = translation.home.content;
         }
     });
 }
