@@ -1,4 +1,4 @@
-/* Globální styly */
+/* Global styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigace */
+/* Navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ body {
     color: #ffa726;
 }
 
-/* Bloky obsahu */
+/* Content blocks */
 .content-block {
     background: rgba(0, 0, 0, 0.8);
     padding: 3rem;
@@ -74,7 +74,7 @@ body {
     font-size: 1.2rem;
 }
 
-/* Projekty */
+/* Projects */
 .project-content {
     display: flex;
     flex-wrap: wrap;
@@ -109,7 +109,7 @@ body {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Sociální ikony */
+/* Social icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -117,7 +117,6 @@ body {
     margin-top: 2rem;
 }
 
-/* Social Icons */
 .social-icons a {
     color: #ffa726;
     font-size: 3rem;
@@ -144,7 +143,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsivita */
+/* Responsiveness */
 @media (max-width: 768px) {
     .navbar .menu {
         flex-direction: column;
