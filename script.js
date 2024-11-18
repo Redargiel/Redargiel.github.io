@@ -68,7 +68,6 @@ if (canvas) {
             return;
         }
 
-        const translations = {
             en: {
                 navbar: ["Home", "About Me", "Projects", "Contact", "Tasks"],
                 footer: "&copy; 2024 GD. All rights reserved."
@@ -80,22 +79,18 @@ if (canvas) {
         };
 
         const lang = isCzech ? 'cz' : 'en';
-        const translation = translations[lang];
 
         // Translate navbar
         const navbarLinks = document.querySelectorAll('.navbar .menu a');
         navbarLinks.forEach((link, index) => {
-            link.textContent = translation.navbar[index];
         });
 
         // Translate footer
         const footerText = document.querySelector('footer .footer-content p');
-        if (footerText) footerText.innerHTML = translation.footer;
     });
 }
 
 
-// Additional translation for page body content
 const pageTranslations = {
     en: {
         about: {
@@ -121,7 +116,6 @@ const pageTranslations = {
     }
 };
 
-// Function to update page body translation dynamically
 const updatePageContent = (lang) => {
     const page = document.body.getAttribute('data-page');
     if (!page) return;
