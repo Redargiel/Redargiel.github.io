@@ -76,11 +76,39 @@ if (languageToggle) {
         const translations = {
             en: {
                 navbar: ["Home", "About Me", "Projects", "Contact", "Tasks"],
-                footer: "&copy; 2024 GD. All rights reserved."
+                footer: "&copy; 2024 GD. All rights reserved.",
+                about: {
+                    title: "About Me",
+                    content: "Hi, I'm Dominik Grader, an IT student at SPŠT. I specialize in web development, game development, and programming. My experience includes:",
+                    list: [
+                        "C++, C#, HTML, JavaScript, CSS, Java",
+                        "Basics of Python",
+                        "Adobe Photoshop, Adobe Illustrator, Adobe Animate, Adobe Premiere Pro",
+                        "Unreal Engine, Unity"
+                    ]
+                },
+                contact: {
+                    title: "Contact Me",
+                    content: "Feel free to reach out to me on my social media or via email!"
+                }
             },
             cz: {
                 navbar: ["Domů", "O Mně", "Projekty", "Kontakt", "Úkoly"],
-                footer: "&copy; 2024 GD. Všechna práva vyhrazena."
+                footer: "&copy; 2024 GD. Všechna práva vyhrazena.",
+                about: {
+                    title: "O Mně",
+                    content: "Ahoj, jmenuji se Dominik Grader, jsem student IT na SPŠT. Specializuji se na webový vývoj, vývoj her a programování. Moje zkušenosti zahrnují:",
+                    list: [
+                        "C++, C#, HTML, JavaScript, CSS, Java",
+                        "Základy Pythonu",
+                        "Adobe Photoshop, Adobe Illustrator, Adobe Animate, Adobe Premiere Pro",
+                        "Unreal Engine, Unity"
+                    ]
+                },
+                contact: {
+                    title: "Kontaktujte Mě",
+                    content: "Neváhejte mě kontaktovat na mých sociálních sítích nebo e-mailem!"
+                }
             }
         };
 
@@ -96,6 +124,19 @@ if (languageToggle) {
         // Translate footer
         const footerText = document.querySelector('footer .footer-content p');
         if (footerText) footerText.innerHTML = translation.footer;
+
+        // Translate sections
+        if (page === 'about') {
+            document.querySelector('.content-block h1').textContent = translation.about.title;
+            document.querySelector('.content-block p').textContent = translation.about.content;
+            const listItems = document.querySelectorAll('.content-block ul li');
+            listItems.forEach((item, index) => {
+                item.textContent = translation.about.list[index];
+            });
+        } else if (page === 'contact') {
+            document.querySelector('.content-block h1').textContent = translation.contact.title;
+            document.querySelector('.content-block p').textContent = translation.contact.content;
+        }
     });
 }
 
