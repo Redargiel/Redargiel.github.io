@@ -202,3 +202,14 @@ footer {
 .language-button:hover {
     background-color: #ffcc80;
 }
+
+
+.fa-instagram, .fa-github, .fa-envelope {
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.fa-instagram:hover, .fa-github:hover, .fa-envelope:hover {
+    color: #ffcc80;
+    transform: scale(1.2);
+}
